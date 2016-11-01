@@ -6,6 +6,8 @@ var jwt = require("jsonwebtoken");
 var _ = require("lodash");
 var bcryptjs = require("bcryptjs");
 
+const port = process.env.PORT || 3000;
+
 var app = express();
 
 app.use(bodyParser.json());
@@ -244,6 +246,6 @@ var Person = {
 var {fname} = Person;
 console.log(fname);
 
-app.listen(3000, function(){
-	console.log("Server running");
+app.listen(port, function(){
+	console.log("Server running Heroku");
 });
